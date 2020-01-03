@@ -11,21 +11,28 @@
   display: flex;
   flex-direction: row;
   padding-left: 50px;
+  /*border-radius: 50px;*/
 }
 .sidebar {
   flex: 2;
-  order: 2;
+  order: 2; 
 }
 .text {
   flex: 5;
-  order: 1;
+  /*order: 1;*/
   border-right: 6px solid grey;
 }
-.planetImage {
+#planetPicture{
+  position: absolute;
   object-fit: cover;
+  cursor: move;
+
+  /* tthis is all dead???
   width: 100%
   max-height: 100%;
   border-radius:50%
+  /*This is for draggable?*/
+  */
 }
 body {
   background-image:url('/static/sky.jpg');
