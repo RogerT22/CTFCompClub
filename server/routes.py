@@ -25,7 +25,12 @@ def index():
 @app.route('/planets', methods=['GET', 'POST'])
 def planets():
     print(os.path.dirname(os.path.abspath(__file__)))
-    return render_template('planets.html');
+    return render_template('suggestion.html');
+
+@app.route('/planets', methods=['GET', 'POST'])
+def cookies():
+    return "On cookies"
+
 """
 @app.route('/login', methods=['GET', 'POST'])
 

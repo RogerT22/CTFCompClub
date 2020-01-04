@@ -8,7 +8,8 @@
     <div class= "site">
         <div class="header">
             <h1 class="htext">NIBBA NEPTUNE</h1>
-            <img src = "/static/neptune.jpg" alt = "The blue planet" class="planetImage">
+            <img id = "planetPicture" src = "/static/neptune.jpg" alt = "The blue planet" class="planetImage">
+            <script src="{{url_for('static', filename='draggable.js')}}"></script>
         </div>
           <div class = "sidebar">
             <button class="button">Question 1</button>
