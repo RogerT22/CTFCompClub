@@ -1,53 +1,52 @@
 .site {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  grid-template-areas:
+  'header header header'
+  'content content sidebar';
+}
+
+.header{
+    grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-  
-    grid-template-areas:
-    'header header header'
-    'sidebar content content';
-  }
-  
-  .header{
-      grid-area: header;
-      display: grid;
-      grid-auto-rows: 1fr;
-      grid-template-columns: 4fr 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "htext planet";
-  }
-  
-  .hText{
-      grid-area: htext;
-  }
-  
-  .sidebar {
-    grid-area: sidebar;
-    color: #FDFEFE;
-    font-size: 1em;
-  }
-  .text {
-    grid-area: content;
-    color: #FDFEFE;
-    font-size: 1em;
-  }
-  .planetImage {
-    grid-area: planet;
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-    border-radius:50%
-  }
-  body {
-    background-image:url('/static/sky.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 100px 100px 100px 100px;
-  }
-  p {
-    font-size: 2em;
-  }
-  h1 {
-    font-size: 5em;
-  }
-  
+    grid-auto-rows: 1fr;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "htext planet";
+}
+
+.hText{
+    grid-area: htext;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  color: #FDFEFE;
+  font-size: 1em;
+}
+.text {
+  grid-area: content;
+  color: #FDFEFE;
+  font-size: 1em;
+}
+.planetImage {
+  grid-area: planet;
+  object-fit: cover;
+  width: 100%;
+  height:auto;
+  border-radius:50%
+}
+body {
+  background-image:url('./sky.jpg');
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 100px 100px 100px 100px;
+}
+p {
+  font-size: 2em;
+}
+h1 {
+  font-size: 5em;
+}
