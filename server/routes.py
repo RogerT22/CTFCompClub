@@ -27,9 +27,9 @@ def planets():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('suggestion.html');
 
-@app.route('/planets', methods=['GET', 'POST'])
+@app.route('/cookies', methods=['GET', 'POST'])
 def cookies():
-    return "On cookies"
+    return render_template('cookies.html');
 
 """
 @app.route('/login', methods=['GET', 'POST'])
