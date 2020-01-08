@@ -37,12 +37,12 @@
 
 .planetImage {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 2vw;
+  right: 2vw;
   grid-area: planet;
   object-fit: cover;
   height:auto;
-  width: 20em;
+  width: 8vw;
   border-radius:50%
 }
 body {
@@ -50,10 +50,10 @@ body {
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 100px 100px 100px 100px;
+  margin: 2em 2vw 2em 2vw;
 }
 button {
-  border-radius: 1em;
+  border-radius: 0.2em;
   background-color: #4c74af; /* Green */
   border: none;
   color: white;
@@ -61,16 +61,16 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 4em;
+  font-size: 3vw;
   height: 4em;
-  width: 10em;
+  width: ;
 }
 p {
-  font-size: 4em;
+  font-size: 1.5vw;
   color: black;
   margin: 2em 2em 2em 2em;
 }
 h1 {
   color: white;
-  font-size: 15em;
+  font-size: 4vw;
 }

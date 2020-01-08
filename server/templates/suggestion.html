@@ -3,13 +3,13 @@
 <head>
 <title>Page Title</title>
 </head>
-  <link rel="stylesheet" href="/static/suggestions.css">
+  <link rel="stylesheet" href="/server/static/suggestions.css">
 <body>
     <div class= "site">
         <div class="header">
             <h1 class="htext">NIBBA NEPTUNE</h1>
-            <img id = "planetPicture" src = "/static/neptune.jpg" alt = "The blue planet" class="planetImage">
-            <script src="{{url_for('static', filename='draggable.js')}}"></script>
+            <img id = "planetPicture" src = "/server/static/neptune.jpg" alt = "The blue planet" class="planetImage">
+            <script src="{{url_for('/server/static', filename='draggable.js')}}"></script>
         </div>
           <div class = "sidebar">
             <button class="button">Question 1</button>
