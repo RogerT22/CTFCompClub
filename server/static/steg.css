@@ -1,0 +1,24 @@
+body{
+    width: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+#site{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.text{
+    font-size: 5em;
+    text-align: center;
+    color: white;
+}
+
+.pic{
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
