@@ -10,19 +10,13 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
     return "helloworld"
     #return render_template('index.html', title='Home', user=user, posts=posts)
+
+@app.route('/robots', methods=['GET', 'POST'])
+def robots():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('robots.html');
 
 @app.route('/planets', methods=['GET', 'POST'])
 def planets():
