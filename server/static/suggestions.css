@@ -1,7 +1,7 @@
 .site {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  justify-content: space-between;
+
   grid-template-areas:
   'header header header'
   'content content sidebar';
@@ -19,30 +19,22 @@
 .hText{
     grid-area: htext;
 }
-.text {
-  grid-area: content;
-  background-color: #FEFEFE;
-  border-right: 0.4em solid grey;
-}
+
 .sidebar {
   grid-area: sidebar;
   color: #FDFEFE;
   font-size: 1em;
-  background-color: #FEFEFE;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 }
-
+.text {
+  grid-area: content;
+  color: #FDFEFE;
+  font-size: 1em;
+}
 .planetImage {
-  position: absolute;
-  top: 10%;
-  right: 10%;
   grid-area: planet;
   object-fit: cover;
+  width: 100%;
   height:auto;
-  width: 20em;
   border-radius:50%
 }
 body {
@@ -52,25 +44,9 @@ body {
   background-size: cover;
   margin: 100px 100px 100px 100px;
 }
-button {
-  border-radius: 1em;
-  background-color: #4c74af; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 4em;
-  height: 4em;
-  width: 10em;
-}
 p {
-  font-size: 4em;
-  color: black;
-  margin: 2em 2em 2em 2em;
+  font-size: 2em;
 }
 h1 {
-  color: white;
-  font-size: 15em;
+  font-size: 5em;
 }
