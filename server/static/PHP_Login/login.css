@@ -1,4 +1,0 @@
-function reveal() {
-  document.getElementById("demo").innerHTML = "FLAG{ArtOfDistraction}";
-
-}
