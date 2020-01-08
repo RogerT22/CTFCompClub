@@ -25,7 +25,12 @@ def index():
 @app.route('/planets', methods=['GET', 'POST'])
 def planets():
     print(os.path.dirname(os.path.abspath(__file__)))
-    return render_template('planets.html');
+    return render_template('suggestion.html');
+
+@app.route('/cookies', methods=['GET', 'POST'])
+def cookies():
+    return render_template('cookies.html');
+
 """
 @app.route('/login', methods=['GET', 'POST'])
 
@@ -38,5 +43,9 @@ def login():
     return render_template('login.html',  title='Sign In', form=form)
 
 """
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template("LoginForm.php");
+
 if __name__ == "__main__":
     app.run(debug=True)
