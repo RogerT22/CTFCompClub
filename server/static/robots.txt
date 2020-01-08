@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+FLAG{B3eP_B00P_CR1Si5_4V3rT3d}
