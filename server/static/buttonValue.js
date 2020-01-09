@@ -1,8 +1,10 @@
 function sendOver(val) {
+  //console.log("Hello");
   var entry = {
     message: val
   };
-    fetch('/MultipleOf516', {
+  //console.log("Hello");
+  fetch('/MultipleOf516', {
     method: "POST",
     credentials:"include",
     body: JSON.stringify(entry),
@@ -12,13 +14,14 @@ function sendOver(val) {
     })
   })
   .then( function(response){
+    //console.log(response)
     if(response.status !== 200) {
-      console.log("FUCK");
+      console.log("Nope");
       return;
     }
-    response.json().then(function(data)
-      console.log(data);
+    response.json().then(function(data){
+          console.log(data);
+    }
     )
   })
-
 }

@@ -64,25 +64,28 @@ def login():
 ######BUTTON LINK HERE IS OKAY...
 @app.route('/formQ', methods=['GET','POST'])
 def change():
+    """
     if request.method == "POST":
         if request.form['theReal'] == '5':
             print("WE IN HERE3");
             return render_template('formQFlag.html');
+            """
     return render_template("formQ.html");
 
 #HAVE TO RENDER TEMPLATE
 @app.route('/MultipleOf516', methods=['GET','POST'])
 def check():
     #print("Hello", file = sys.stderr)
+    res = make_response(jsonify({"message": "nope"}),500)
     if request.method == "POST":
         #print("Hello", file = sys.stderr)
         req = request.get_json()
         #print(type(req),dir(req), file = sys.stderr)
-        #print(req, file = sys.stderr)
+        print(req, file = sys.stderr)
         #print("inside post", file = sys.stderr)
-        res = make_response(500)
+        print("There's a post" + req["message"], file = sys.stderr)
         if "message" in req:
-            print("Val????" + req["message"], file = sys.stderr)
+            #print("Val????" + req["message"], file = sys.stderr)
             if req["message"] == "5":
                 res = make_response(jsonify({"message": "FLAG{Reality_Can_Be_Whatever_I_Want"}),200)
         """
