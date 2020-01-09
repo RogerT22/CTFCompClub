@@ -13,15 +13,44 @@ def index():
     return "helloworld"
     #return render_template('index.html', title='Home', user=user, posts=posts)
 
+@app.route('/mercury', methods=['GET', 'POST'])
+def mercury():
+    return render_template('Mercury.html');
+
+@app.route('/venus', methods=['GET', 'POST'])
+def venus():
+    return render_template('Venus.html');
+
+@app.route('/earth', methods=['GET', 'POST'])
+def earth():
+    return render_template('Earth.html');
+
+@app.route('/mars', methods=['GET', 'POST'])
+def mars():
+    return render_template('Mars.html');
+
+@app.route('/jupiter', methods=['GET', 'POST'])
+def jupiter():
+    return render_template('Jupiter.html');
+
+@app.route('/saturn', methods=['GET', 'POST'])
+def saturn():
+    return render_template('Saturn.html');
+
+@app.route('/uranus', methods=['GET', 'POST'])
+def uranus():
+    return render_template('Uranus.html');
+
+@app.route('/neptune', methods=['GET', 'POST'])
+def neptune():
+    return render_template('Neptune.html');
+
 @app.route('/robots', methods=['GET', 'POST'])
 def robots():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('robots.html');
 
-@app.route('/planets', methods=['GET', 'POST'])
-def planets():
-    print(os.path.dirname(os.path.abspath(__file__)))
-    return render_template('suggestion.html');
+
 
 @app.route('/cookies', methods=['GET', 'POST'])
 def cookies():

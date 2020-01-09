@@ -1,55 +1,103 @@
-.heading-container {
-  display: flex;
-  flex-direction: row;
+.page-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 10fr 2fr;
   justify-content: space-between;
-  align-items: center;
+  margin-top:8vw;
+  padding: 0 2vw;
+  grid-template-areas:
+  'content sidebar';
 }
-.content-container {
-  background-color: #FEFEFE;
-  margin-left: 200px;
-  margin-right: 200px;
+
+.footer{
+  width: 100%;
+  background-color: #111;
+  height: 10vw;
   display: flex;
-  flex-direction: row;
-  padding-left: 50px;
-  /*border-radius: 50px;*/
-}
-.sidebar {
-  flex: 2;
-  order: 2;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 8vw;
+}
+
+.header{
+    width: 100%;
+    padding: 0 0vw 0 0;
+    box-shadow: 0 0.1em 2em grey;
+    display: grid;
+    grid-template-columns: 1fr 10vw;
+    grid-template-rows: 1fr;
+    grid-template-areas: "htext planet";
+    position: absolute;
+    top:0;
+}
+
+.hText{
+    margin-left: 2vw;
+    font-size: 4vw;
 }
 .text {
-  flex: 5;
-  /*order: 1;*/
-  border-right: 6px solid grey;
+  grid-area: content;
 }
-#planetPicture{
+.sidebar {
+  grid-area: sidebar;
+  color: #FDFEFE;
+  font-size: 1em;
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.fixed{
+  position: sticky;
+  top:2vw;
+}
+
+.imgContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: planet;
+}
+.planetImage {
+  cursor: pointer;
   position: absolute;
   object-fit: cover;
-  cursor: move;
-
-  /* tthis is all dead???
-  width: 100%
-  max-height: 100%;
-  border-radius:50%
-  /*This is for draggable?*/
-  */
+  z-index: 3;
+  height:auto;
+  width: 3vw;
+  border-radius:50%;
+  margin-right:2vw;
 }
 body {
-  background-image:url('/static/sky.jpg');
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 100px 100px 100px 100px;
+  margin: 0;
+  font-family: "lemonmilk";
+}
+
+.button{
+  font-size: 1.5em;
+  margin: 1vw 0;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "roboto";
 }
 p {
-  font-size: 50px;
-  margin: 50px 50px 50px 50px;
-
+  font-size: 2vw;
+  color: black;
+  font-family: "roboto";
 }
-h1 {
-  color: #FEFEFE;
-  font-size: 200px;
+
+
+@font-face{
+  font-family: 'lemonmilk';
+  src:url(./LemonMilk.woff);
+}
+
+@font-face{
+  font-family: 'roboto';
+  src:url(./Roboto-Regular.ttf);
 }
