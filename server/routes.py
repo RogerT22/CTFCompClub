@@ -49,7 +49,7 @@ def neptune():
 def robots():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('robots.html');
-    
+
 @app.route('/inlineflag', methods=['GET', 'POST'])
 def inline():
     print(os.path.dirname(os.path.abspath(__file__)))
@@ -79,6 +79,11 @@ def cookies():
             return render_template('cookiesFlag.html')
     return render_template('cookies.html');
 
+@app.route('/Loginformishere', methods=['GET', 'POST'])
+    return render_template("LoginFormFLag")
+
+def login():
+    return render_template("LoginForm.html")
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template("LoginForm.html")
@@ -94,7 +99,7 @@ def change():
     return render_template("formQ.html");
 
 #HAVE TO RENDER TEMPLATE
-@app.route('/MultipleOf516', methods=['GET','POST'])
+@app.route('/thepersonifcationoffear', methods=['GET','POST'])
 def check():
     #print("Hello", file = sys.stderr)
     res = make_response(jsonify({"message": "nope"}),500)
@@ -104,10 +109,10 @@ def check():
         #print(type(req),dir(req), file = sys.stderr)
         print(req, file = sys.stderr)
         #print("inside post", file = sys.stderr)
-        print("There's a post" + req["message"], file = sys.stderr)
+        #print("There's a post" + req["message"], file = sys.stderr)
         if "message" in req:
             #print("Val????" + req["message"], file = sys.stderr)
-            if req["message"] == "5":
+            if req["message"] == "phobos":
                 res = make_response(jsonify({"message": "FLAG{Reality_Can_Be_Whatever_I_Want"}),200)
         """
         print("This is line 80 ", file = sys.stderr )

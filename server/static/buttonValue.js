@@ -4,7 +4,7 @@ function sendOver(val) {
     message: val
   };
   //console.log("Hello");
-  fetch('/MultipleOf516', {
+  fetch('/thepersonifcationoffear', {
     method: "POST",
     credentials:"include",
     body: JSON.stringify(entry),
