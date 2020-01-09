@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return "helloworld"
+    return render_template('Mercury.html');
     #return render_template('index.html', title='Home', user=user, posts=posts)
 
 @app.route('/mercury', methods=['GET', 'POST'])
