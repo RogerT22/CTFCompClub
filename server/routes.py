@@ -81,7 +81,7 @@ def cookies():
 
 @app.route('/Loginformishere', methods=['GET', 'POST'])
 def yougotit():
-    return render_template("LoginFormFLag")
+    return render_template("LoginFormFLag.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
