@@ -50,14 +50,12 @@ def robots():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('robots.html');
 
-
-
 @app.route('/cookies', methods=['GET', 'POST'])
 def cookies():
     if request.method == "GET":
-        username = request.cookies.get('test')
+        username = request.cookies.get('hmmm')
         if username == "yes":
-            return render_template('suggestion.html')
+            return render_template('cookiesFlag.html')
     return render_template('cookies.html');
 
 """

@@ -7,7 +7,7 @@ var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth
 + currentdate.getMinutes() + ":" + currentdate.getSeconds();
 console.log(datetime);
 var instant = 1/24 * 1/60 * 1/60;
-var mycookie = Cookies.get("test");
+var mycookie = Cookies.get("hmmm");
 if(mycookie == "yes") {
   fetch('/cookies', {
     method: "GET",
@@ -19,6 +19,6 @@ if(mycookie == "yes") {
     })
   })
 }
-Cookies.set('YOYO', 'value', { expires: 1/24 * 1/60 * 30/60});
-Cookies.set('test', 'no', { expires: 1/24 * 1/60 * 1/60});
+Cookies.set('YOGABABA', 'blue', { expires: 1/24 * 1/60 * 30/60});
+Cookies.set('hmmm', 'no', { expires: 1/24 * 1/60 * 1/60});
 console.log(document.title);
