@@ -80,10 +80,9 @@ def cookies():
     return render_template('cookies.html');
 
 @app.route('/Loginformishere', methods=['GET', 'POST'])
+def yougotit():
     return render_template("LoginFormFLag")
 
-def login():
-    return render_template("LoginForm.html")
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template("LoginForm.html")
