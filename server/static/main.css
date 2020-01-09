@@ -90,6 +90,9 @@ p {
   font-family: "roboto";
 }
 
+a:link{
+  color:black !important;
+}
 
 @font-face{
   font-family: 'lemonmilk';
@@ -100,3 +103,5 @@ p {
   font-family: 'roboto';
   src:url(./Roboto-Regular.ttf);
 }
+
+/* _It5_AnOtH3R_ */

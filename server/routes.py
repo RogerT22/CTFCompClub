@@ -49,6 +49,11 @@ def neptune():
 def robots():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('robots.html');
+    
+@app.route('/inlineflag', methods=['GET', 'POST'])
+def inline():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('inline.html');
 
 @app.route('/hex', methods=['GET', 'POST'])
 def hex():
