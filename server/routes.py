@@ -33,7 +33,7 @@ def mars():
 def jupiter():
     return render_template('Jupiter.html');
 
-@app.route('/saturn', methods=['GET', 'POST'])
+@app.route('/thehiddenpage', methods=['GET', 'POST'])
 def saturn():
     return render_template('Saturn.html');
 
