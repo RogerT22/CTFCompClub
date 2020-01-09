@@ -64,7 +64,6 @@
 }
 .planetImage {
   cursor: pointer;
-  position: absolute;
   object-fit: cover;
   z-index: 3;
   height:auto;
