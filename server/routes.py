@@ -25,6 +25,10 @@ def planets():
 
 @app.route('/cookies', methods=['GET', 'POST'])
 def cookies():
+    if request.method == "GET":
+        username = request.cookies.get('test')
+        if username == "yes":
+            return render_template('suggestion.html')
     return render_template('cookies.html');
 
 """

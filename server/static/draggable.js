@@ -21,6 +21,8 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     if(e.ctrlKey) {
+      //elmnt.position = "absolute";
+      //elmnt.
       document.onmousemove = elementDrag;
     }
   }

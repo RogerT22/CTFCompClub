@@ -3,14 +3,15 @@
 <head>
 <title>Page Title</title>
 </head>
-  <link rel="stylesheet" href="/server/static/suggestions.css">
+  <link rel="stylesheet" href="static/suggestions.css">
 <body>
   <div class="header">
       <div class="hText">NIBBA NEPTUNE</div>
       <div class="imgContainer">
-        <img id = "planetPicture" src = "/server/static/neptune.jpg" alt = "The blue planet" class="planetImage">
+        <img id = "planetPicture" src = "static/neptune.jpg" alt = "The blue planet" class="planetImage">
+        <img id = "oops" src = "static/saturn_c.png" class="secondImage">
       </div>
-      <script src="{{url_for('/server/static', filename='draggable.js')}}"></script>
+      <script src="{{url_for('static', filename='draggable.js')}}"></script>
   </div>
   <div class="page-layout">
     <div class = "sidebar">
@@ -21,9 +22,9 @@
       </div>
     </div>
     <div class = "text">
-      
+
       <h3>Keep it frosty folks.</h3>
-      
+
       <p>
         NEPTUNE MAY SEEM like a serene sapphire world at first glance. But don't let its quiet azure hues fool you: The eighth planet from the sun is a wild child.
         Neptune is the windiest planet in our solar system, whipping up momentous gusts that can reach more than 1,200 miles an hour. That soothing sapphire expanse does reveal some of the whirling chaos below in the form of cloudy bands and massive gyres that look like dark smudges on its surface.
@@ -45,9 +46,9 @@
         Five known rings of rocks and dust encircle Neptune—all named after astronomers who helped bring to light details about the windy world. The ring names are Galle, Le Verrier, Lassell, Arago, and Adams. Neptune also has several partial rings, known as arcs.
         Only one spacecraft has ever visited the dark blue world. Voyager 2 whipped by in 1989, collecting captivating data and images. Though many scientists have proposed additional visits, none have yet been approved.</p>
 
-        <p>Until another plan is crafted to visit Neptune, 
-        researchers will have to appease their curiosity from afar, 
-        capitalizing on observations from the Hubble Space Telescope as well as 
+        <p>Until another plan is crafted to visit Neptune,
+        researchers will have to appease their curiosity from afar,
+        capitalizing on observations from the Hubble Space Telescope as well as
         telescopes that have their bases firmly planted on the ground</p>
       </p>
     </div>
