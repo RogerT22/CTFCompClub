@@ -58,58 +58,40 @@ def cookies():
             return render_template('cookiesFlag.html')
     return render_template('cookies.html');
 
-"""
-@app.route('/login', methods=['GET', 'POST'])
-
-def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        flash('Login requested for user {}, remember_me={}'.format(
-            form.username.data, form.remember_me.data))
-        return redirect(url_for('index'))
-    return render_template('login.html',  title='Sign In', form=form)
-
-
-@app.route('/handle_forms', method = ['POST'])
-def handle_data():
-
-"""
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    print('Hello world!', file=sys.stderr)
-    if request.method == "POST":
-        print("WE IN HERE");
-        if request.form['theReal'] == 'Do Something':
-            print("WE IN HERE3");
-            return render_template('suggestion.html');
-    print('Hello world2!', file=sys.stderr)
-    return render_template("LoginForm.html");
-
+    return render_template("LoginForm.html")
+######BUTTON LINK HERE IS OKAY...
 @app.route('/formQ', methods=['GET','POST'])
 def change():
     if request.method == "POST":
-        print("WE IN HERE");
-        if request.form['theReal'] == 'Do Something':
+        if request.form['theReal'] == '5':
             print("WE IN HERE3");
-            return render_template('suggestion.html');
+            return render_template('formQFlag.html');
     return render_template("formQ.html");
 
+#HAVE TO RENDER TEMPLATE
 @app.route('/MultipleOf516', methods=['GET','POST'])
 def check():
+    #print("Hello", file = sys.stderr)
     if request.method == "POST":
-        print("Hello", file = sys.stderr)
+        #print("Hello", file = sys.stderr)
         req = request.get_json()
-        print(type(req),dir(req), file = sys.stderr)
-        print(req["number"], file = sys.stderr)
-        if "number" in req:
-            print("DUDUUDU", file = sys.stderr)
+        #print(type(req),dir(req), file = sys.stderr)
+        #print(req, file = sys.stderr)
+        #print("inside post", file = sys.stderr)
+        res = make_response(500)
+        if "message" in req:
+            print("Val????" + req["message"], file = sys.stderr)
+            if req["message"] == "5":
+                res = make_response(jsonify({"message": "FLAG{Reality_Can_Be_Whatever_I_Want"}),200)
         """
         print("This is line 80 ", file = sys.stderr )
         print(req.json['number'], file = sys.stderr)
         print("The type is: " + type(req), file = sys.stderr)
         print(req, file = sys.stderr)
         """
-    return "hello"
+    return res
 
 if __name__ == "__main__":
     app.run(debug=True)

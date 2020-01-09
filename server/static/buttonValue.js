@@ -1,8 +1,8 @@
 function sendOver(val) {
   var entry = {
-    number: parseInt(val)
-  }
-  fetch('/MultipleOf516', {
+    message: val
+  };
+    fetch('/MultipleOf516', {
     method: "POST",
     credentials:"include",
     body: JSON.stringify(entry),
@@ -11,4 +11,14 @@ function sendOver(val) {
       "content-type" : "application/json"
     })
   })
+  .then( function(response){
+    if(response.status !== 200) {
+      console.log("FUCK");
+      return;
+    }
+    response.json().then(function(data)
+      console.log(data);
+    )
+  })
+
 }
