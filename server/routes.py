@@ -3,7 +3,7 @@ from flask import render_template, flash, redirect, url_for
 #from ... import microblog
 #from app.forms import LoginForm
 import os
-from flask import request, jsonify, make_response
+from flask import request, jsonify, make_response, send_file
 import sys
 
 app = Flask(__name__)
@@ -49,6 +49,27 @@ def neptune():
 def robots():
     print(os.path.dirname(os.path.abspath(__file__)))
     return render_template('robots.html');
+    
+@app.route('/inlineflag', methods=['GET', 'POST'])
+def inline():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('inline.html');
+
+@app.route('/hex', methods=['GET', 'POST'])
+def hex():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('base64.html');
+
+
+@app.route('/nebula', methods=['GET', 'POST'])
+def steg():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('steg.html');
+
+@app.route('/essveegee', methods=['GET', 'POST'])
+def svg():
+    print(os.path.dirname(os.path.abspath(__file__)))
+    return render_template('svg.html');
 
 @app.route('/cookies', methods=['GET', 'POST'])
 def cookies():
@@ -95,6 +116,12 @@ def check():
         print(req, file = sys.stderr)
         """
     return res
+
+#Robots.txt file
+@app.route("/robots.txt")
+def robots_txt():
+    robots_path = os.path.join(app.static_folder,'robots.txt')
+    return send_file(robots_path);
 
 if __name__ == "__main__":
     app.run(debug=True)
